@@ -7,15 +7,14 @@ import com.microsoft.playwright.Playwright;
 import config.TestConfig;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import pages.HomePage;
+import org.testng.annotations.Ignore;
 
 public class BaseTest {
     protected Playwright playwright;
     protected Browser browser;
     protected Page page;
 
-    @BeforeClass(alwaysRun = true)
+    @BeforeClass
     public void launchBrowser() {
         playwright = Playwright.create();
         browser = playwright.chromium().launch(
@@ -28,7 +27,7 @@ public class BaseTest {
         page.navigate(TestConfig.APP_URL);
     }
 
-    @AfterClass(alwaysRun = true)
+    @AfterClass
     public void closeBrowser() {
         try {
             if (browser != null) browser.close();

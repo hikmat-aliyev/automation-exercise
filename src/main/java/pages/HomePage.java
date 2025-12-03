@@ -22,12 +22,22 @@ public class HomePage {
     }
 
     private void verifyHomePage() {
-        assertThat(header).isVisible();
+        assertThat(header.first()).isVisible();
     }
 
     private void handleConsentIfPresent() {
         if (consentBtn.isVisible()) {
             consentBtn.click();
         }
+    }
+
+    public LoginPage navigateToLoginPage() {
+        navbar.navigateToLoginPage();
+        return new LoginPage(page);
+    }
+
+    public ProductsPage navigateToProductsPage() {
+        navbar.navigateToProductsPage();
+        return new ProductsPage(page);
     }
 }
