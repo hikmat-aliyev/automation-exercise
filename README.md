@@ -52,7 +52,4 @@ allure serve target/allure-results
 * `Components/` contains reusable UI components (e.g., Navbar, CategoryMenu, ProductCard).
 
 ## Notes
-
-* Locators are mostly based on **ARIA roles** and **CSS selectors**.
-* Tests include filtering products, adding to cart, and completing checkout.
 * Allure results and generated reports are **not pushed to GitHub**.
