@@ -2,6 +2,7 @@ package apiClient;
 
 import config.TestConfig;
 import io.restassured.response.Response;
+
 import static io.restassured.RestAssured.given;
 
 public class ProductApiClient {

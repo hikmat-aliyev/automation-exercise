@@ -38,9 +38,6 @@ public class SignupPage {
         this.zipCode = page.locator("[data-qa='zipcode']");
         this.mobileNumber = page.locator("[data-qa='mobile_number']");
         this.submitBtn = page.locator("[data-qa='create-account']");
-
-        WaitUtils.waitForVisibility(userName, email, password, firstName, lastName,
-                address, country, state, city, zipCode, mobileNumber, submitBtn);
     }
 
     public AccountCreatedPage registerUser(SignupData data) {

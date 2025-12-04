@@ -3,8 +3,7 @@ package pages;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
-
-import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
+import testData.SignupData;
 
 public class LoginPage {
 
@@ -19,13 +18,6 @@ public class LoginPage {
         this.signupName = page.locator("[data-qa='signup-name']");
         this.signupEmail = page.locator("[data-qa='signup-email']");
         this.signupBtn = page.locator("[data-qa='signup-button']");
-        verifyLoginPage();
-    }
-
-    private void verifyLoginPage() {
-        assertThat(signupEmail).isVisible();
-        assertThat(signupBtn).isVisible();
-        assertThat(signupName).isVisible();
     }
 
     public LoginPage enterSignupEmail(String email) {
@@ -33,7 +25,7 @@ public class LoginPage {
         return this;
     }
 
-    public LoginPage enterSignupName(String name) {
+    public LoginPage  enterSignupName(String name) {
         signupName.fill(name);
         return this;
     }
@@ -41,6 +33,12 @@ public class LoginPage {
     public SignupPage clickSignupBtn() {
         signupBtn.click();
         return new SignupPage(page);
+    }
+
+    public SignupPage startSignupProcess(SignupData data) {
+        return this.enterSignupName(data.userName)
+                    .enterSignupEmail(data.email)
+                    .clickSignupBtn();
     }
 
 }

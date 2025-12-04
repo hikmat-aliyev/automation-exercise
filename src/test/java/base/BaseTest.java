@@ -7,7 +7,6 @@ import com.microsoft.playwright.Playwright;
 import config.TestConfig;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Ignore;
 
 public class BaseTest {
     protected Playwright playwright;
