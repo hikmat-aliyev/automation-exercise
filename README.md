@@ -31,12 +31,6 @@ Run all tests:
 mvn clean test
 ```
 
-Run a specific test class:
-
-```bash
-mvn -Dtest=E2EUserJourneyTest test
-```
-
 ## Generating Allure Reports
 
 After running tests, generate the Allure report:
