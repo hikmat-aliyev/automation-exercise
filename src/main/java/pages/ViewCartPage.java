@@ -3,7 +3,6 @@ package pages;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import lombok.Data;
-import utils.WaitUtils;
 
 @Data
 public class ViewCartPage {

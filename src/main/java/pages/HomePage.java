@@ -3,7 +3,6 @@ package pages;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import components.Navbar;
-import utils.WaitUtils;
 
 public class HomePage {
     private final Page page;
